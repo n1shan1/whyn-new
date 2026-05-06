@@ -6,10 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Menu, X, Zap } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
-
-const CALCOM_URL =
-  process.env.NEXT_PUBLIC_CALCOM_URL ||
-  "https://cal.com/your-username/discovery-call";
+import { BRAND } from "@/lib/constants";
 
 const SORA = "var(--font-sora,'Sora',sans-serif)";
 const DM   = "var(--font-dm-sans,'DM Sans',sans-serif)";
@@ -170,7 +167,7 @@ export function Navbar() {
 
             {/* ── Desktop CTA ───────────────────────────────────────────── */}
             <div className="hidden md:flex items-center">
-              <button data-cal-namespace="30min" data-cal-link="niishantdev/30min">
+              <button data-cal-namespace={BRAND.calcomNamespace} data-cal-link={BRAND.calcomUrl}>
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
@@ -293,8 +290,8 @@ export function Navbar() {
                   className="pt-8 space-y-3"
                 >
                   <button
-                    data-cal-namespace="30min"
-                    data-cal-link="niishantdev/30min"
+                    data-cal-namespace={BRAND.calcomNamespace}
+                    data-cal-link={BRAND.calcomUrl}
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl text-base font-bold transition-all duration-200 active:scale-[0.98]"
                     style={{

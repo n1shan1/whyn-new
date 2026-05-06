@@ -60,8 +60,8 @@ export function FinalCTA() {
             {/* Direct booking link */}
             <div className="pt-8" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
               <button
-                data-cal-namespace="30min"
-                data-cal-link="niishantdev/30min"
+                data-cal-namespace={BRAND.calcomNamespace}
+                data-cal-link={BRAND.calcomUrl}
                 className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                 style={{
                   background: "#A8E63D",

@@ -4,10 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
-
-const CALCOM_URL =
-  process.env.NEXT_PUBLIC_CALCOM_URL ||
-  "https://cal.com/your-username/discovery-call";
+import { BRAND } from "@/lib/constants";
 
 const marqueeItems = [
   "B2B Companies",
@@ -103,7 +100,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-10 flex flex-col sm:flex-row gap-3 items-center"
         >
-          <div data-cal-namespace="30min" data-cal-link="niishantdev/30min">
+          <div data-cal-namespace={BRAND.calcomNamespace} data-cal-link={BRAND.calcomUrl}>
             <Button
               size="lg"
               className="rounded-xl px-8 py-6 text-base font-bold transition-all duration-200 hover:scale-[1.02]"

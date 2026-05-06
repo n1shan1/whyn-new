@@ -153,8 +153,8 @@ export function Packages() {
 
               {/* CTA */}
               <button
-                data-cal-namespace="30min"
-                data-cal-link="niishantdev/30min"
+                data-cal-namespace={BRAND.calcomNamespace}
+                data-cal-link={BRAND.calcomUrl}
                 className="mt-auto flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-bold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                 style={
                   tier.featured

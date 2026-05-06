@@ -4,10 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
-const CALCOM_URL =
-  process.env.NEXT_PUBLIC_CALCOM_URL ||
-  "https://cal.com/your-username/discovery-call";
+import { BRAND } from "@/lib/constants";
 
 const SORA = "var(--font-sora,'Sora',sans-serif)";
 const DM   = "var(--font-dm-sans,'DM Sans',sans-serif)";

@@ -8,7 +8,8 @@ export const BRAND = {
   name:       "WHYN",
   tagline:    "Turn attention into revenue.",
   domain:     "whyn.in",
-  calcomUrl:  process.env.NEXT_PUBLIC_CALCOM_URL || "https://cal.com/whyn/discovery",
+  calcomUrl:  "niishantdev/discovery-call",
+  calcomNamespace: "discovery-call",
   teamEmail:  "team@whyn.in",
 };
 
