@@ -10,22 +10,22 @@ const stats = [
 ];
 
 const trustedBy = [
-  "Health Coaches",
-  "Business Coaches",
-  "Life Coaches",
+  "B2B Companies",
+  "Service Businesses",
+  "SaaS Startups",
+  "Sales Teams",
+  "Solution Providers",
+  "Consultancies",
   "Marketing Agencies",
-  "Course Creators",
-  "Fitness Coaches",
-  "Sales Consultants",
-  "Info-Product Sellers",
-  "Health Coaches",
-  "Business Coaches",
-  "Life Coaches",
+  "Real Estate Firms",
+  "B2B Companies",
+  "Service Businesses",
+  "SaaS Startups",
+  "Sales Teams",
+  "Solution Providers",
+  "Consultancies",
   "Marketing Agencies",
-  "Course Creators",
-  "Fitness Coaches",
-  "Sales Consultants",
-  "Info-Product Sellers",
+  "Real Estate Firms",
 ];
 
 const SORA = "var(--font-sora,'Sora',sans-serif)";

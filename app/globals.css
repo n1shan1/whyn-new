@@ -86,7 +86,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
     font-family: var(--font-dm-sans, 'DM Sans', sans-serif);
     font-feature-settings: "rlig" 1, "calt" 1;
   }

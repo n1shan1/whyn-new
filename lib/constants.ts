@@ -22,14 +22,14 @@ export const NAV_LINKS = [
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 
 export const HERO = {
-  headline:       "High-converting websites and lead generation systems for coaches.",
+  headline:       "High-converting websites and lead generation systems for growing businesses.",
   subheadline:    "WHYN builds conversion-focused websites and automation for leads. Capture visitors, follow up instantly, and fill your calendar.",
   primaryCta:     "Book a Call",
   secondaryCta:   "See How It Works",
   secondaryHref:  "/#what-we-do",
   proofBullets:   ["No leads go cold", "Automated WhatsApp + email follow-up", "Live in as little as 2 days"],
-  marqueeLabel:   "Trusted by coaches, creators, and service businesses worldwide",
-  marqueeItems:   ["Coaches", "Course Creators", "Consultants", "Service Businesses", "Agencies", "Online Sellers"],
+  marqueeLabel:   "Trusted by service businesses, agencies, and B2B companies worldwide",
+  marqueeItems:   ["B2B Companies", "SaaS Startups", "Consultants", "Service Businesses", "Agencies", "E-commerce"],
 };
 
 // ─── Problem ──────────────────────────────────────────────────────────────────
@@ -126,7 +126,7 @@ export const PACKAGES = {
       badge:    "Most Popular",
       featured: true,
       timeline: "4-6 Days",
-      bestFor:  "Coaches & creators driving active traffic.",
+      bestFor:  "Agencies & service businesses driving active traffic.",
       features: [
         { group: "Build", items: ["Everything in Starter", "Dedicated Conversion Landing Page", "Custom WHYN Design Tokens"] },
         { group: "Systems", items: ["Supabase Lead Capture System", "Cal.com Booking Integration", "Spam Protection (Honeypot)"] },
@@ -174,7 +174,7 @@ export const PROOF = {
     {
       before: "Getting traffic, zero enquiries",
       after:  "Landing page converting at 18%+ with instant follow-up",
-      label:  "Fitness Coach",
+      label:  "Agency Owner",
     },
     {
       before: "Manually DMing every lead on Instagram",
@@ -184,7 +184,7 @@ export const PROOF = {
     {
       before: "Booking link buried in bio, rarely clicked",
       after:  "Booking flow embedded in funnel — 3x more calls",
-      label:  "Course Creator",
+      label:  "SaaS Founder",
     },
   ],
 };
@@ -202,7 +202,7 @@ export const TESTIMONIALS = [
   {
     quote: "I thought my website was fine, but it wasn't converting. Since the rebuild, we've seen a 3x increase in booked calls. It's an actual machine now.",
     author: "David R.",
-    role: "Creator",
+    role: "Founder",
     company: "The Content School",
     rating: 5,
   },
@@ -218,7 +218,7 @@ export const PORTFOLIO_PROJECTS = [
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
   },
   {
-    title: "Elevate Coaching",
+    title: "Elevate Consulting",
     category: "Automated Booking Funnel",
     description: "Replaced manual DMs with an automated WhatsApp-to-Cal.com flow.",
     image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2348&auto=format&fit=crop",
@@ -231,14 +231,14 @@ export const PORTFOLIO_PROJECTS = [
   },
   {
     title: "Zenith Info-Products",
-    category: "Course Sales Funnel",
-    description: "A 3-step funnel for a $997 course, leading to a 14% conversion rate increase.",
+    category: "B2B Sales Funnel",
+    description: "A 3-step funnel for a high-ticket B2B service, leading to a 14% conversion rate increase.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop",
   },
   {
-    title: "Lumina Creators",
-    category: "Link-in-bio System",
-    description: "A premium creator funnel that instantly segments and nurtures followers.",
+    title: "Lumina Tech",
+    category: "Lead Generation",
+    description: "A premium B2B funnel that instantly segments and nurtures prospects.",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2344&auto=format&fit=crop",
   },
 ];
@@ -264,7 +264,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Who is this for?",
-    a: "Coaches, creators, and online sellers who want high-converting websites and automation to handle their leads without manual work.",
+    a: "Service businesses, agencies, and B2B companies who want high-converting websites and automation to handle their leads without manual work.",
   },
   {
     q: "What if I already have a website?",

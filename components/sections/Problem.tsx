@@ -60,7 +60,7 @@ export function Problem() {
               className="text-lg text-muted-foreground leading-relaxed mb-10"
               style={{ fontFamily: DM, fontWeight: 300 }}
             >
-              Most coaches have audience but no system. Leads go cold. DMs pile up. Nobody follows up. We build the infrastructure that does it for you.
+              Most businesses have traffic but no conversion system. Leads go cold. Inquiries stay unanswered. Nobody follows up. We build the infrastructure that closes the gap.
             </motion.p>
 
             <motion.div variants={containerVariants} className="space-y-4">

@@ -10,26 +10,26 @@ const CALCOM_URL =
   "https://cal.com/your-username/discovery-call";
 
 const marqueeItems = [
-  "Business Coaches",
-  "Course Creators",
-  "Fitness Coaches",
-  "Online Sellers",
-  "Consultants",
-  "Info-Product Builders",
-  "Personal Brands",
+  "B2B Companies",
+  "Service Businesses",
+  "SaaS Startups",
+  "Sales Teams",
+  "Solution Providers",
+  "Consultancies",
   "Marketing Agencies",
-  "High-Ticket Coaches",
-  "Mindset Coaches",
-  "Business Coaches",
-  "Course Creators",
-  "Fitness Coaches",
-  "Online Sellers",
-  "Consultants",
-  "Info-Product Builders",
-  "Personal Brands",
+  "Real Estate Firms",
+  "Financial Services",
+  "Professional Services",
+  "B2B Companies",
+  "Service Businesses",
+  "SaaS Startups",
+  "Sales Teams",
+  "Solution Providers",
+  "Consultancies",
   "Marketing Agencies",
-  "High-Ticket Coaches",
-  "Mindset Coaches",
+  "Real Estate Firms",
+  "Financial Services",
+  "Professional Services",
 ];
 
 const SORA = "var(--font-sora,'Sora',sans-serif)";
@@ -93,7 +93,7 @@ export function Hero() {
           className="mt-6 text-lg md:text-xl max-w-xl leading-relaxed"
           style={{ color: "rgba(255,255,255,0.45)", fontFamily: DM, fontWeight: 300 }}
         >
-          Most coaches are one good system away from fully booked. The problem isn&apos;t your content — it&apos;s what happens after someone sees it.
+          Most businesses are one solid system away from scaling. The problem isn&apos;t your traffic — it&apos;s the infrastructure that converts it.
         </motion.p>
 
         {/* CTAs */}
@@ -168,7 +168,7 @@ export function Hero() {
           <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-background to-transparent pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
           <div className="animate-marquee flex gap-0 whitespace-nowrap w-max">
-            {marqueeItems.map((item, i) => (
+            {[...marqueeItems, ...marqueeItems].map((item, i) => (
               <span key={i} className="flex items-center">
                 <span
                   className="px-6 text-sm font-medium text-muted-foreground"

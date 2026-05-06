@@ -14,32 +14,32 @@ const DM   = "var(--font-dm-sans,'DM Sans',sans-serif)";
 
 const cases = [
   {
-    tag: "Coaching",
-    client: "Online Business Coach",
-    before: "Losing leads in DMs",
+    tag: "Services",
+    client: "B2B Consultancy",
+    before: "Losing leads in emails",
     after: "Structured booking funnel",
-    result: "3× more booked calls in 30 days",
+    result: "3× more sales meetings in 30 days",
   },
   {
-    tag: "Creator",
-    client: "Course Creator",
-    before: "Manual follow-ups every day",
-    after: "Automated email + WhatsApp",
-    result: "Saved 10+ hours per week",
+    tag: "SaaS",
+    client: "AI Startup",
+    before: "Manual demo follow-ups",
+    after: "Automated nurture sequence",
+    result: "Saved 15+ hours per week",
   },
   {
     tag: "Agency",
-    client: "Marketing Agency",
+    client: "Design Agency",
     before: "No qualifying process",
     after: "Pre-call qualification system",
     result: "90% fewer unqualified calls",
   },
   {
-    tag: "Coaching",
-    client: "Fitness Coach",
-    before: "Content with zero conversions",
-    after: "Landing page + lead magnet funnel",
-    result: "12 new clients in first month",
+    tag: "Real Estate",
+    client: "Property Group",
+    before: "Static website, zero leads",
+    after: "Lead capture + automation",
+    result: "45 targeted inquiries in first month",
   },
 ];
 
