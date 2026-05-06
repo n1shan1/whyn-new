@@ -1,0 +1,564 @@
+
+<h2 class="sr-only">whyn brand identity system — logo, colors, typography, voice, and usage rules</h2>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+.wb *{box-sizing:border-box;margin:0;padding:0}
+.wb{font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.65;color:var(--color-text-primary)}
+
+.wb .nav{display:flex;gap:3px;margin-bottom:36px;flex-wrap:wrap}
+.wb .nt{background:none;border:0.5px solid var(--color-border-tertiary);border-radius:6px;font-family:'DM Sans',sans-serif;font-size:12px;color:var(--color-text-secondary);padding:6px 14px;cursor:pointer;transition:all 0.15s}
+.wb .nt:hover{background:var(--color-background-secondary);color:var(--color-text-primary)}
+.wb .nt.on{background:var(--color-text-primary);color:var(--color-background-primary);border-color:var(--color-text-primary)}
+
+.wb .pg{display:none}.wb .pg.on{display:block}
+
+.wb .lbl{font-family:'Sora',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-text-secondary);margin-bottom:10px}
+
+.wb h2{font-family:'Sora',sans-serif;font-size:22px;font-weight:700;letter-spacing:-0.025em;line-height:1.15;margin-bottom:8px;color:var(--color-text-primary)}
+.wb .sub{color:var(--color-text-secondary);font-size:13px;margin-bottom:24px;line-height:1.6}
+.wb hr{border:none;border-top:0.5px solid var(--color-border-tertiary);margin:28px 0}
+
+.wb .g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:12px}
+.wb .g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:10px}
+
+.wb .card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:18px 20px}
+
+.wb .kv{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:0.5px solid var(--color-border-tertiary);font-size:13px}
+.wb .kv:last-child{border-bottom:none}
+.wb .kv span:first-child{color:var(--color-text-secondary)}
+.wb .kv strong{color:var(--color-text-primary);font-weight:500}
+
+.wb .badge{display:inline-flex;align-items:center;font-family:'Sora',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:3px 9px;border-radius:4px}
+
+.wb .voice-ex{border-left:2px solid #1A6B3A;background:var(--color-background-secondary);border-radius:0 8px 8px 0;padding:14px 16px;margin-bottom:10px;font-size:14px;line-height:1.6}
+.wb .voice-ex .meta{font-family:'Sora',sans-serif;font-size:10px;color:var(--color-text-secondary);margin-top:8px;letter-spacing:0.05em}
+
+.wb .nope{background:var(--color-background-danger);border-radius:8px;padding:14px 16px;color:var(--color-text-danger);font-size:13px;line-height:1.8;font-style:italic}
+
+/* LOGO FRAMES */
+.wb .logo-wrap{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:24px;display:flex;flex-direction:column;gap:14px;margin-bottom:20px}
+.wb .logo-light{background:#ffffff;border:0.5px solid rgba(0,0,0,0.08);border-radius:10px;padding:24px 28px;display:flex;align-items:center;gap:12px}
+.wb .logo-dark{background:#0C0E0F;border-radius:10px;padding:24px 28px;display:flex;align-items:center;gap:12px}
+.wb .logo-forest{background:#0A1A0F;border-radius:10px;padding:24px 28px;display:flex;align-items:center;gap:12px}
+
+/* WORDMARKS */
+.wb .wm{font-family:'Sora',sans-serif;font-weight:800;letter-spacing:-0.05em;line-height:1;font-size:28px}
+.wb .wm-sm{font-family:'Sora',sans-serif;font-weight:800;letter-spacing:-0.05em;line-height:1;font-size:20px}
+
+/* SWATCH */
+.wb .sw-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.wb .sw{text-align:center}
+.wb .sw-box{width:56px;height:56px;border-radius:8px;margin-bottom:6px;border:0.5px solid rgba(0,0,0,0.06)}
+.wb .sw-nm{font-family:'Sora',sans-serif;font-size:9px;color:var(--color-text-secondary);line-height:1.4}
+.wb .sw-hx{font-family:'Sora',sans-serif;font-size:9px;color:var(--color-text-primary);font-weight:500}
+
+/* TYPE SCALE */
+.wb .tr{display:flex;align-items:baseline;gap:14px;border-bottom:0.5px solid var(--color-border-tertiary);padding:14px 0;flex-wrap:wrap}
+.wb .tr:last-child{border-bottom:none}
+.wb .tm{font-family:'Sora',sans-serif;font-size:10px;color:var(--color-text-secondary);min-width:100px;flex-shrink:0;line-height:1.6}
+
+/* COMPONENT PREVIEWS */
+.wb .btn-p{display:inline-flex;align-items:center;gap:6px;background:#1A6B3A;color:#fff;font-family:'Sora',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:6px;border:none;cursor:pointer;letter-spacing:0.01em}
+.wb .btn-s{display:inline-flex;align-items:center;background:transparent;color:var(--color-text-primary);font-family:'Sora',sans-serif;font-size:13px;font-weight:500;padding:9px 20px;border-radius:6px;border:0.5px solid var(--color-border-secondary);cursor:pointer;background:var(--color-background-secondary)}
+.wb .btn-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+
+/* ICON MARK */
+.wb .icon-mark{width:40px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* PROCESS */
+.wb .step{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.wb .step:last-child{border-bottom:none}
+.wb .step-n{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;color:#1A6B3A;min-width:32px;line-height:1}
+
+/* HERO PREVIEW */
+.wb .preview-dark{background:#0C0E0F;border-radius:var(--border-radius-lg);padding:36px 28px;position:relative;overflow:hidden;margin-bottom:12px}
+.wb .preview-dark h2{color:#F0F4F0;font-size:24px;letter-spacing:-0.025em;margin-bottom:10px}
+.wb .preview-dark p{color:rgba(240,244,240,0.55);font-size:13px;font-weight:300;max-width:380px;margin-bottom:24px;line-height:1.65}
+.wb .proof-pill{font-family:'Sora',sans-serif;font-size:11px;font-weight:500;color:rgba(240,244,240,0.45);background:rgba(255,255,255,0.06);padding:5px 12px;border-radius:20px;letter-spacing:0.03em;border:0.5px solid rgba(255,255,255,0.08)}
+.wb .tagline-pre{font-family:'Sora',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#2ECC71;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.wb .tagline-pre::before{content:'';width:16px;height:1.5px;background:#2ECC71}
+</style>
+
+<div class="wb">
+
+<div style="margin-bottom:8px" class="lbl">Studio identity system</div>
+<h2 style="font-family:'Sora',sans-serif;font-size:36px;font-weight:800;letter-spacing:-0.04em;line-height:1.05;margin-bottom:6px">whyn<span style="color:#1A6B3A">.</span></h2>
+<p class="sub" style="margin-bottom:28px;max-width:460px">Complete brand identity — logo, color, type, voice, components, and site preview. Built for a conversion systems studio.</p>
+
+<div class="nav">
+  <button class="nt on" onclick="wTab('identity',this)">Identity</button>
+  <button class="nt" onclick="wTab('logo',this)">Logo</button>
+  <button class="nt" onclick="wTab('color',this)">Colors</button>
+  <button class="nt" onclick="wTab('type',this)">Typography</button>
+  <button class="nt" onclick="wTab('voice',this)">Voice</button>
+  <button class="nt" onclick="wTab('comp',this)">Components</button>
+  <button class="nt" onclick="wTab('preview',this)">Site preview</button>
+</div>
+
+<!-- ══ IDENTITY ══ -->
+<div class="pg on" id="w-identity">
+  <div class="lbl">01 — Name & positioning</div>
+  <div class="card" style="margin-bottom:16px">
+    <div class="kv"><span>Name</span><strong style="font-family:'Sora',sans-serif;font-size:18px;font-weight:800;letter-spacing:-0.04em">whyn<span style="color:#1A6B3A">.</span></strong></div>
+    <div class="kv"><span>Pronunciation</span><strong>WHY-n</strong></div>
+    <div class="kv"><span>Etymology</span><span style="color:var(--color-text-secondary);font-size:13px">Short for "Why Not" — the answer to every reason a business hasn't built a real system yet</span></div>
+    <div class="kv"><span>Category</span><span class="badge" style="background:#E6F4EC;color:#1A6B3A">Conversion systems studio</span></div>
+    <div class="kv"><span>Tagline</span><strong>Websites that rank. Systems that convert.</strong></div>
+    <div class="kv"><span>Domain</span><strong>whyn.studio / whyn.in</strong></div>
+  </div>
+
+  <div class="lbl">Positioning statement</div>
+  <div style="border-left:2px solid #1A6B3A;padding:16px 20px;background:var(--color-background-secondary);border-radius:0 10px 10px 0;margin-bottom:20px">
+    <div style="font-family:'Sora',sans-serif;font-size:16px;font-weight:700;letter-spacing:-0.02em;color:var(--color-text-primary);line-height:1.4;margin-bottom:6px">whyn builds AI-ready websites and conversion systems for coaches, service businesses, and online sellers — so leads come in and follow-ups happen without manual work.</div>
+    <div style="font-size:12px;color:var(--color-text-secondary)">Not a design agency. Not a freelancer. A performance-first, system-oriented studio.</div>
+  </div>
+
+  <div class="g3" style="margin-bottom:20px">
+    <div class="card">
+      <div class="lbl" style="margin-bottom:8px">For</div>
+      <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.7">Coaches · Course creators · Local service businesses · Consultants · Agencies</div>
+    </div>
+    <div class="card">
+      <div class="lbl" style="margin-bottom:8px">Not for</div>
+      <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.7">E-commerce · Mobile apps · Logo-only projects · Social media management</div>
+    </div>
+    <div class="card">
+      <div class="lbl" style="margin-bottom:8px">Personality</div>
+      <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.7">Direct · Technical · Outcome-driven · Zero fluff · Like a senior dev who ships</div>
+    </div>
+  </div>
+
+  <div class="lbl">Brand character</div>
+  <div class="g2">
+    <div class="card" style="display:flex;flex-direction:column;gap:10px">
+      <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:600;color:#1A6B3A;letter-spacing:0.08em">CONFIDENT</div>
+      <div style="font-size:13px;color:var(--color-text-secondary)">Speaks with the authority of someone who has shipped systems, not someone who sells promises.</div>
+    </div>
+    <div class="card" style="display:flex;flex-direction:column;gap:10px">
+      <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:600;color:#1A6B3A;letter-spacing:0.08em">MINIMAL</div>
+      <div style="font-size:13px;color:var(--color-text-secondary)">Every element earns its place. No decoration for decoration's sake. Signal over noise.</div>
+    </div>
+    <div class="card" style="display:flex;flex-direction:column;gap:10px">
+      <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:600;color:#1A6B3A;letter-spacing:0.08em">SPECIFIC</div>
+      <div style="font-size:13px;color:var(--color-text-secondary)">₹25K–₹60K, not "affordable." 2–5 days, not "quick turnaround." Numbers over vagueness.</div>
+    </div>
+    <div class="card" style="display:flex;flex-direction:column;gap:10px">
+      <div style="font-family:'Sora',sans-serif;font-size:12px;font-weight:600;color:#1A6B3A;letter-spacing:0.08em">HONEST</div>
+      <div style="font-size:13px;color:var(--color-text-secondary)">Says what's out of scope. Doesn't overpromise. Trust is earned through clarity.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ LOGO ══ -->
+<div class="pg" id="w-logo">
+  <div class="lbl">02 — Logo system</div>
+  <div class="sub">The whyn mark is always set in Sora 800, tracked at −0.05em. The dot is the only accent element — Forest Green on dark, same on light. Never alter the weight, spacing, or color.</div>
+
+  <div class="logo-wrap">
+    <div class="lbl" style="margin-bottom:2px">Primary — dark background (preferred)</div>
+    <div class="logo-dark">
+      <div class="icon-mark" style="background:rgba(26,107,58,0.2)">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <rect x="2" y="2" width="8" height="8" rx="2" fill="#2ECC71"/>
+          <rect x="12" y="2" width="8" height="8" rx="2" fill="rgba(46,204,113,0.4)"/>
+          <rect x="2" y="12" width="8" height="8" rx="2" fill="rgba(46,204,113,0.25)"/>
+          <rect x="12" y="12" width="8" height="8" rx="2" fill="#2ECC71"/>
+        </svg>
+      </div>
+      <div class="wm" style="color:#F0F4F0">whyn<span style="color:#2ECC71">.</span></div>
+    </div>
+
+    <div class="lbl" style="margin-bottom:2px">Light background</div>
+    <div class="logo-light">
+      <div class="icon-mark" style="background:#E6F4EC">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <rect x="2" y="2" width="8" height="8" rx="2" fill="#1A6B3A"/>
+          <rect x="12" y="2" width="8" height="8" rx="2" fill="rgba(26,107,58,0.35)"/>
+          <rect x="2" y="12" width="8" height="8" rx="2" fill="rgba(26,107,58,0.18)"/>
+          <rect x="12" y="12" width="8" height="8" rx="2" fill="#1A6B3A"/>
+        </svg>
+      </div>
+      <div class="wm" style="color:#0C0E0F">whyn<span style="color:#1A6B3A">.</span></div>
+    </div>
+
+    <div class="lbl" style="margin-bottom:2px">Brand green background</div>
+    <div class="logo-forest">
+      <div class="icon-mark" style="background:rgba(255,255,255,0.08)">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <rect x="2" y="2" width="8" height="8" rx="2" fill="#ffffff"/>
+          <rect x="12" y="2" width="8" height="8" rx="2" fill="rgba(255,255,255,0.35)"/>
+          <rect x="2" y="12" width="8" height="8" rx="2" fill="rgba(255,255,255,0.18)"/>
+          <rect x="12" y="12" width="8" height="8" rx="2" fill="#ffffff"/>
+        </svg>
+      </div>
+      <div class="wm" style="color:#ffffff">whyn<span style="color:rgba(255,255,255,0.45)">.</span></div>
+    </div>
+  </div>
+
+  <div class="lbl">Icon mark — standalone use</div>
+  <div class="card" style="margin-bottom:20px">
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <div style="width:56px;height:56px;background:#0C0E0F;border-radius:14px;display:flex;align-items:center;justify-content:center">
+          <svg width="32" height="32" viewBox="0 0 22 22" fill="none">
+            <rect x="2" y="2" width="8" height="8" rx="2" fill="#2ECC71"/>
+            <rect x="12" y="2" width="8" height="8" rx="2" fill="rgba(46,204,113,0.4)"/>
+            <rect x="2" y="12" width="8" height="8" rx="2" fill="rgba(46,204,113,0.25)"/>
+            <rect x="12" y="12" width="8" height="8" rx="2" fill="#2ECC71"/>
+          </svg>
+        </div>
+        <div style="font-size:11px;color:var(--color-text-secondary)">56px app</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <div style="width:40px;height:40px;background:#0C0E0F;border-radius:10px;display:flex;align-items:center;justify-content:center">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <rect x="2" y="2" width="8" height="8" rx="2" fill="#2ECC71"/>
+            <rect x="12" y="2" width="8" height="8" rx="2" fill="rgba(46,204,113,0.4)"/>
+            <rect x="2" y="12" width="8" height="8" rx="2" fill="rgba(46,204,113,0.25)"/>
+            <rect x="12" y="12" width="8" height="8" rx="2" fill="#2ECC71"/>
+          </svg>
+        </div>
+        <div style="font-size:11px;color:var(--color-text-secondary)">40px UI</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <div style="width:28px;height:28px;background:#0C0E0F;border-radius:7px;display:flex;align-items:center;justify-content:center">
+          <svg width="16" height="16" viewBox="0 0 22 22" fill="none">
+            <rect x="2" y="2" width="8" height="8" rx="2" fill="#2ECC71"/>
+            <rect x="12" y="2" width="8" height="8" rx="2" fill="rgba(46,204,113,0.4)"/>
+            <rect x="2" y="12" width="8" height="8" rx="2" fill="rgba(46,204,113,0.25)"/>
+            <rect x="12" y="12" width="8" height="8" rx="2" fill="#2ECC71"/>
+          </svg>
+        </div>
+        <div style="font-size:11px;color:var(--color-text-secondary)">28px nav</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <div style="width:20px;height:20px;background:#0C0E0F;border-radius:4px;display:flex;align-items:center;justify-content:center">
+          <svg width="12" height="12" viewBox="0 0 22 22" fill="none">
+            <rect x="2" y="2" width="8" height="8" rx="2" fill="#2ECC71"/>
+            <rect x="12" y="2" width="8" height="8" rx="2" fill="rgba(46,204,113,0.4)"/>
+            <rect x="2" y="12" width="8" height="8" rx="2" fill="rgba(46,204,113,0.25)"/>
+            <rect x="12" y="12" width="8" height="8" rx="2" fill="#2ECC71"/>
+          </svg>
+        </div>
+        <div style="font-size:11px;color:var(--color-text-secondary)">20px favicon</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lbl">Logo rules</div>
+  <div class="g2">
+    <div class="card">
+      <div style="font-family:'Sora',sans-serif;font-size:11px;font-weight:600;color:#1A6B3A;margin-bottom:8px;letter-spacing:0.08em">DO</div>
+      <div style="font-size:13px;color:var(--color-text-secondary);display:flex;flex-direction:column;gap:5px">
+        <div>→ Always use the provided SVG mark</div>
+        <div>→ Maintain clear space equal to the cap height on all sides</div>
+        <div>→ Use dark bg version as primary default</div>
+        <div>→ Scale proportionally only</div>
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-family:'Sora',sans-serif;font-size:11px;font-weight:600;color:var(--color-text-danger);margin-bottom:8px;letter-spacing:0.08em">NEVER</div>
+      <div style="font-size:13px;color:var(--color-text-secondary);display:flex;flex-direction:column;gap:5px">
+        <div>× Change the font or weight</div>
+        <div>× Add drop shadows or glow effects</div>
+        <div>× Stretch or distort</div>
+        <div>× Use on a busy photographic background</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ COLORS ══ -->
+<div class="pg" id="w-color">
+  <div class="lbl">03 — Color system</div>
+  <div class="sub">Near-black base. One accent. Forest green chosen for authority, trust, and growth — not trend-chasing. Warm neutrals prevent the cold "tech agency" feel.</div>
+
+  <div class="lbl">Primary palette</div>
+  <div class="sw-row">
+    <div class="sw"><div class="sw-box" style="background:#0C0E0F"></div><div class="sw-nm">Void</div><div class="sw-hx">#0C0E0F</div></div>
+    <div class="sw"><div class="sw-box" style="background:#141618"></div><div class="sw-nm">Ink</div><div class="sw-hx">#141618</div></div>
+    <div class="sw"><div class="sw-box" style="background:#1E2124"></div><div class="sw-nm">Surface</div><div class="sw-hx">#1E2124</div></div>
+    <div class="sw"><div class="sw-box" style="background:#F0F4F0;border-color:#ddd"></div><div class="sw-nm">Paper</div><div class="sw-hx">#F0F4F0</div></div>
+    <div class="sw"><div class="sw-box" style="background:#E4EAE4;border-color:#ddd"></div><div class="sw-nm">Paper 2</div><div class="sw-hx">#E4EAE4</div></div>
+    <div class="sw"><div class="sw-box" style="background:#D5DDD5;border-color:#ddd"></div><div class="sw-nm">Paper 3</div><div class="sw-hx">#D5DDD5</div></div>
+  </div>
+
+  <div class="lbl">Accent — Forest Green (one color only)</div>
+  <div class="sw-row" style="margin-bottom:20px">
+    <div class="sw"><div class="sw-box" style="background:#2ECC71"></div><div class="sw-nm">Vivid</div><div class="sw-hx">#2ECC71</div></div>
+    <div class="sw"><div class="sw-box" style="background:#1A6B3A"></div><div class="sw-nm">Forest</div><div class="sw-hx">#1A6B3A</div></div>
+    <div class="sw"><div class="sw-box" style="background:#0F4023"></div><div class="sw-nm">Deep</div><div class="sw-hx">#0F4023</div></div>
+    <div class="sw"><div class="sw-box" style="background:#E6F4EC;border-color:#ddd"></div><div class="sw-nm">Tint</div><div class="sw-hx">#E6F4EC</div></div>
+    <div class="sw"><div class="sw-box" style="background:rgba(46,204,113,0.12);border-color:#ddd"></div><div class="sw-nm">Ghost</div><div class="sw-hx">12% opacity</div></div>
+  </div>
+
+  <hr>
+
+  <div class="lbl">Usage rules</div>
+  <div class="g2" style="margin-bottom:20px">
+    <div class="card">
+      <div class="badge" style="background:#E6F4EC;color:#1A6B3A;margin-bottom:12px">Use green for</div>
+      <div style="font-size:13px;color:var(--color-text-secondary);display:flex;flex-direction:column;gap:5px;line-height:1.6">
+        <div>→ Primary CTA buttons (Forest #1A6B3A)</div>
+        <div>→ Logo dot and icon mark</div>
+        <div>→ Active nav states and hover underlines</div>
+        <div>→ Key metrics and result numbers</div>
+        <div>→ Section accent lines and badges</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="badge" style="background:var(--color-background-danger);color:var(--color-text-danger);margin-bottom:12px">Never</div>
+      <div style="font-size:13px;color:var(--color-text-secondary);display:flex;flex-direction:column;gap:5px;line-height:1.6">
+        <div>× A second accent (no blue, amber, purple)</div>
+        <div>× Green text on white (contrast too low)</div>
+        <div>× Neon or glowing green effects</div>
+        <div>× Green fills larger than a button or badge</div>
+        <div>× Gradients mixing green with anything</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lbl">Color mapping</div>
+  <div class="card">
+    <div class="kv"><span>Background (primary)</span><strong style="font-family:monospace;font-size:12px">#0C0E0F</strong></div>
+    <div class="kv"><span>Background (card/section)</span><strong style="font-family:monospace;font-size:12px">#1E2124</strong></div>
+    <div class="kv"><span>Primary CTA</span><strong style="font-family:monospace;font-size:12px">#1A6B3A bg · #fff text</strong></div>
+    <div class="kv"><span>User message bubble</span><strong style="font-family:monospace;font-size:12px">#1A6B3A bg · #fff text</strong></div>
+    <div class="kv"><span>AI / system message</span><strong style="font-family:monospace;font-size:12px">#1E2124 bg · #F0F4F0 text</strong></div>
+    <div class="kv"><span>Success state</span><strong style="font-family:monospace;font-size:12px">#2ECC71 vivid</strong></div>
+    <div class="kv"><span>Error state</span><strong style="font-family:monospace;font-size:12px">#E53E3E</strong></div>
+  </div>
+</div>
+
+<!-- ══ TYPE ══ -->
+<div class="pg" id="w-type">
+  <div class="lbl">04 — Typography</div>
+  <div class="sub">Two typefaces with strict roles. Sora for everything that needs authority and precision. DM Sans for everything that needs to be read.</div>
+
+  <div class="g2" style="margin-bottom:28px">
+    <div class="card">
+      <div style="font-family:'Sora',sans-serif;font-size:28px;font-weight:800;letter-spacing:-0.04em;margin-bottom:6px;color:var(--color-text-primary)">Sora</div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:6px">Display · Headings · Labels · Wordmark</div>
+      <div style="font-family:monospace;font-size:11px;color:var(--color-text-secondary)">Weights: 600, 700, 800</div>
+    </div>
+    <div class="card">
+      <div style="font-family:'DM Sans',sans-serif;font-size:24px;font-weight:400;margin-bottom:6px;color:var(--color-text-primary)">DM Sans</div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:6px">Body · UI · Subtext · Forms</div>
+      <div style="font-family:monospace;font-size:11px;color:var(--color-text-secondary)">Weights: 300, 400, 500</div>
+    </div>
+  </div>
+
+  <div class="lbl">Type scale</div>
+  <div class="tr">
+    <div class="tm">Display<br>Sora 800<br>56px · −0.03em</div>
+    <div style="font-family:'Sora',sans-serif;font-size:32px;font-weight:800;letter-spacing:-0.03em;color:var(--color-text-primary);line-height:1.05">Websites that rank.<br><span style="color:#1A6B3A">Systems that convert.</span></div>
+  </div>
+  <div class="tr">
+    <div class="tm">Heading 1<br>Sora 700<br>28px · −0.025em</div>
+    <div style="font-family:'Sora',sans-serif;font-size:22px;font-weight:700;letter-spacing:-0.025em;color:var(--color-text-primary)">Your site isn't the problem. Your system is.</div>
+  </div>
+  <div class="tr">
+    <div class="tm">Heading 2<br>Sora 600<br>18px · −0.02em</div>
+    <div style="font-family:'Sora',sans-serif;font-size:16px;font-weight:600;letter-spacing:-0.02em;color:var(--color-text-primary)">AI-Ready Website — Growth Tier</div>
+  </div>
+  <div class="tr">
+    <div class="tm">Body<br>DM Sans 400<br>15px · 1.7 lh</div>
+    <div style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--color-text-secondary);line-height:1.7;max-width:380px">Most coaches have audience but no system. Leads go cold. DMs pile up. Nobody follows up. We build the infrastructure that does it for you.</div>
+  </div>
+  <div class="tr">
+    <div class="tm">Label<br>Sora 600<br>10px · 0.18em</div>
+    <div style="font-family:'Sora',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-text-secondary)">Section 01 — The system</div>
+  </div>
+  <div class="tr" style="border-bottom:none">
+    <div class="tm">Mono / code<br>System mono<br>12px</div>
+    <div style="font-family:monospace;font-size:12px;color:var(--color-text-secondary)">capture → nurture → convert → book</div>
+  </div>
+</div>
+
+<!-- ══ VOICE ══ -->
+<div class="pg" id="w-voice">
+  <div class="lbl">05 — Voice & tone</div>
+  <div class="sub" style="margin-bottom:24px">whyn sounds like a senior developer who's seen too many broken funnels. Direct. Specific. No enthusiasm-speak. Every line earns its place.</div>
+
+  <div class="g3" style="margin-bottom:24px">
+    <div class="card" style="text-align:center">
+      <div style="font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:#1A6B3A;margin-bottom:6px">Direct</div>
+      <div style="font-size:12px;color:var(--color-text-secondary)">Answer first, context second. No preamble.</div>
+    </div>
+    <div class="card" style="text-align:center">
+      <div style="font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:#1A6B3A;margin-bottom:6px">Specific</div>
+      <div style="font-size:12px;color:var(--color-text-secondary)">Real numbers, real timelines, real scope.</div>
+    </div>
+    <div class="card" style="text-align:center">
+      <div style="font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:#1A6B3A;margin-bottom:6px">Honest</div>
+      <div style="font-size:12px;color:var(--color-text-secondary)">Says what's out of scope. No oversell.</div>
+    </div>
+  </div>
+
+  <div class="lbl">Write like this</div>
+  <div class="voice-ex">
+    <p>"Growth tier starts at ₹25K. That's a full multi-page site, SEO setup, lead capture, and Cal.com booking. Live in 4–5 weeks."</p>
+    <div class="meta">Pricing question — direct, specific, no fluff</div>
+  </div>
+  <div class="voice-ex">
+    <p>"Your site probably isn't the problem. The problem is what happens after someone lands on it. No capture. No follow-up. Cold lead."</p>
+    <div class="meta">Problem framing — names the real issue, creates urgency</div>
+  </div>
+  <div class="voice-ex">
+    <p>"We don't build apps or e-commerce. We build lead systems. If you need a Shopify store, we'll point you to someone good."</p>
+    <div class="meta">Out of scope — honest, no apology, redirects cleanly</div>
+  </div>
+
+  <hr>
+
+  <div class="lbl">Never write this</div>
+  <div class="nope">
+    "We craft bespoke digital experiences that elevate your brand." ✗<br>
+    "Our passionate team leverages cutting-edge technology to unlock your potential." ✗<br>
+    "We're a full-service digital agency for forward-thinking businesses." ✗<br>
+    "Great question! I'd be happy to help you with that today." ✗<br>
+    "Results may vary based on your individual business circumstances." ✗
+  </div>
+</div>
+
+<!-- ══ COMPONENTS ══ -->
+<div class="pg" id="w-comp">
+  <div class="lbl">06 — UI components</div>
+  <div class="sub" style="margin-bottom:24px">All components use whyn design tokens. Clean, minimal, no decoration for its own sake.</div>
+
+  <div class="lbl">Buttons</div>
+  <div class="card" style="margin-bottom:16px">
+    <div class="btn-row" style="margin-bottom:12px">
+      <button class="btn-p">Book a quick call →</button>
+      <button class="btn-s">View our work</button>
+    </div>
+    <div style="font-size:12px;color:var(--color-text-secondary)">Primary: Forest #1A6B3A · Secondary: ghost with border · Never two filled buttons side by side</div>
+  </div>
+
+  <div class="lbl">Badges</div>
+  <div class="card" style="margin-bottom:16px">
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <span class="badge" style="background:#E6F4EC;color:#1A6B3A">Most popular</span>
+      <span class="badge" style="background:#E6F4EC;color:#1A6B3A">Live in 2–5 days</span>
+      <span class="badge" style="background:var(--color-background-secondary);color:var(--color-text-secondary)">AI-ready</span>
+      <span class="badge" style="background:var(--color-background-secondary);color:var(--color-text-secondary)">Coaches</span>
+      <span class="badge" style="background:var(--color-background-success);color:var(--color-text-success)">Booked</span>
+    </div>
+  </div>
+
+  <div class="lbl">Service card</div>
+  <div class="g2" style="margin-bottom:16px">
+    <div class="card" style="border-color:var(--color-border-tertiary)">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <div style="width:32px;height:32px;background:#E6F4EC;border-radius:8px;display:flex;align-items:center;justify-content:center">
+          <i class="ti ti-world" style="font-size:16px;color:#1A6B3A" aria-hidden="true"></i>
+        </div>
+        <div style="font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:var(--color-text-primary)">AI-Ready Website</div>
+      </div>
+      <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.6">Structured HTML, schema markup, Core Web Vitals. Built to rank and be understood by AI platforms.</div>
+    </div>
+    <div class="card" style="border-color:#1A6B3A">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <div style="width:32px;height:32px;background:#E6F4EC;border-radius:8px;display:flex;align-items:center;justify-content:center">
+          <i class="ti ti-bolt" style="font-size:16px;color:#1A6B3A" aria-hidden="true"></i>
+        </div>
+        <div style="font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:var(--color-text-primary)">Conversion System</div>
+      </div>
+      <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.6">Funnels, landing pages, CTA architecture — every page built around one action.</div>
+    </div>
+  </div>
+
+  <div class="lbl">Pricing card</div>
+  <div class="g3">
+    <div class="card">
+      <div style="font-family:'Sora',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--color-text-secondary);margin-bottom:12px">Starter</div>
+      <div style="font-family:'Sora',sans-serif;font-size:24px;font-weight:800;letter-spacing:-0.02em;margin-bottom:4px">₹10K–25K</div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:14px">~$120–$300</div>
+      <div style="height:0.5px;background:var(--color-border-tertiary);margin-bottom:12px"></div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.8">→ 3–5 page site<br>→ SEO setup<br>→ Contact form</div>
+    </div>
+    <div class="card" style="border-color:#1A6B3A;position:relative">
+      <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:#1A6B3A;color:#fff;font-family:'Sora',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:3px 12px;border-radius:3px;white-space:nowrap">Best seller</div>
+      <div style="font-family:'Sora',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#1A6B3A;margin-bottom:12px">Growth</div>
+      <div style="font-family:'Sora',sans-serif;font-size:24px;font-weight:800;letter-spacing:-0.02em;margin-bottom:4px">₹25K–60K</div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:14px">~$300–$720</div>
+      <div style="height:0.5px;background:var(--color-border-tertiary);margin-bottom:12px"></div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.8">→ Full site + SEO<br>→ Lead capture<br>→ Booking flow</div>
+    </div>
+    <div class="card">
+      <div style="font-family:'Sora',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--color-text-secondary);margin-bottom:12px">Scale</div>
+      <div style="font-family:'Sora',sans-serif;font-size:24px;font-weight:800;letter-spacing:-0.02em;margin-bottom:4px">₹60K–1.5L</div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:14px">~$720–$1,800</div>
+      <div style="height:0.5px;background:var(--color-border-tertiary);margin-bottom:12px"></div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.8">→ Full system<br>→ AI integrations<br>→ Automation</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PREVIEW ══ -->
+<div class="pg" id="w-preview">
+  <div class="lbl">07 — Site preview</div>
+  <div class="sub" style="margin-bottom:20px">How the whyn brand lands on the actual landing page.</div>
+
+  <div class="preview-dark">
+    <div style="position:absolute;top:-40px;right:-40px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(46,204,113,0.07) 0%,transparent 70%);pointer-events:none"></div>
+    <div class="tagline-pre">whyn · Conversion Systems</div>
+    <h2 style="font-family:'Sora',sans-serif">Turn your audience into <span style="color:#2ECC71">booked calls</span> and paying clients.</h2>
+    <p style="font-family:'DM Sans',sans-serif">We build AI-ready websites and automated systems. Leads come in. Follow-ups go out. Calendar fills up. You focus on delivery.</p>
+    <div style="display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap">
+      <div class="proof-pill">No missed leads</div>
+      <div class="proof-pill">Automated follow-up</div>
+      <div class="proof-pill">Live in 2–5 days</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-p">Book a quick call →</button>
+      <button style="background:transparent;color:rgba(240,244,240,0.6);font-family:'Sora',sans-serif;font-size:13px;font-weight:500;padding:10px 20px;border-radius:6px;border:0.5px solid rgba(255,255,255,0.12);cursor:pointer">See how it works</button>
+    </div>
+  </div>
+
+  <div class="lbl">Process section</div>
+  <div class="card" style="margin-bottom:16px">
+    <div class="step">
+      <div class="step-n">01</div>
+      <div>
+        <div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:var(--color-text-primary);margin-bottom:3px">Strategy call</div>
+        <div style="font-size:13px;color:var(--color-text-secondary)">Map your funnel, audience, and conversion goals. 60 minutes.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">02</div>
+      <div>
+        <div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:var(--color-text-primary);margin-bottom:3px">Build</div>
+        <div style="font-size:13px;color:var(--color-text-secondary)">Site, automation, and booking flow — connected and live in 2–5 days.</div>
+      </div>
+    </div>
+    <div class="step" style="border-bottom:none">
+      <div class="step-n">03</div>
+      <div>
+        <div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:var(--color-text-primary);margin-bottom:3px">Launch & optimize</div>
+        <div style="font-size:13px;color:var(--color-text-secondary)">Go live. Week 1 monitoring included. Iterate on real conversion data.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="preview-dark" style="text-align:center;padding:40px 28px">
+    <div style="font-family:'Sora',sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(46,204,113,0.7);margin-bottom:16px">Final CTA</div>
+    <div style="font-family:'Sora',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.025em;color:#F0F4F0;margin-bottom:10px;line-height:1.2">If you're serious about turning<br>attention into revenue —</div>
+    <div style="font-size:13px;color:rgba(240,244,240,0.5);margin-bottom:24px;font-weight:300">Book a free 20-minute strategy call. We'll audit your current setup and show exactly what's missing.</div>
+    <button class="btn-p" style="margin:0 auto">Book your free call →</button>
+    <div style="font-size:11px;color:rgba(240,244,240,0.3);margin-top:12px;font-family:'Sora',sans-serif;letter-spacing:0.04em">No pitch. No pressure. Just a system audit.</div>
+  </div>
+</div>
+
+</div>
+
+<script>
+function wTab(id, el) {
+  document.querySelectorAll('.wb .pg').forEach(p => p.classList.remove('on'));
+  document.querySelectorAll('.wb .nt').forEach(b => b.classList.remove('on'));
+  document.getElementById('w-' + id).classList.add('on');
+  el.classList.add('on');
+}
+</script>

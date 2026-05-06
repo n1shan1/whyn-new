@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Dark background -->
+  <rect width="32" height="32" rx="7" fill="#0F0F12"/>
+  <!-- 4-grid WHYN mark (matches the navbar logo) -->
+  <!-- Top-left: solid lime -->
+  <rect x="5"  y="5"  width="9" height="9" rx="1.5" fill="#A8E63D"/>
+  <!-- Bottom-left: 30% lime -->
+  <rect x="5"  y="18" width="9" height="9" rx="1.5" fill="#A8E63D" fill-opacity="0.3"/>
+  <!-- Top-right: 50% lime -->
+  <rect x="18" y="5"  width="9" height="9" rx="1.5" fill="#A8E63D" fill-opacity="0.5"/>
+  <!-- Bottom-right: solid lime -->
+  <rect x="18" y="18" width="9" height="9" rx="1.5" fill="#A8E63D"/>
+</svg>
