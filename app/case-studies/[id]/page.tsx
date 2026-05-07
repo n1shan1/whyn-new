@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Zap, CheckCircle2, BarChart3, Clock, Layout } from "lucide-react";
+import { ArrowUpRight, Zap, CheckCircle2, BarChart3, Clock, Layout, Users } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useParams } from "next/navigation";
@@ -35,7 +35,7 @@ const projectDetails: Record<string, any> = {
     client: "Course Creator",
     metrics: [
       { label: "Revenue", value: "3x", icon: BarChart3 },
-      { label: "Email List", value: "3.2k", icon: User },
+      { label: "Email List", value: "3.2k", icon: Users },
       { label: "Launch Time", value: "5 Days", icon: Zap },
     ],
     overview: "Engineered an 'attention trap' that converted algorithm-dependent YouTube traffic into a predictable email-driven sales machine.",
