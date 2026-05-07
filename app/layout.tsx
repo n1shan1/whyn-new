@@ -56,7 +56,10 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-background text-foreground antialiased">
+      <body className="min-h-screen bg-background text-foreground antialiased relative">
+        <div className="fixed inset-0 bg-grid pointer-events-none z-[-1]" aria-hidden="true" />
+        <div className="fixed inset-0 bg-background/20 pointer-events-none z-[-1]" aria-hidden="true" />
+        
         {/* Scroll sentinel — first element, observed by Navbar's IntersectionObserver */}
         <div id="scroll-sentinel" className="absolute top-0 h-1 w-full pointer-events-none" aria-hidden="true" />
         <Navbar />

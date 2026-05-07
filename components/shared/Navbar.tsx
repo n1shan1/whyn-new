@@ -12,9 +12,10 @@ const SORA = "var(--font-sora,'Sora',sans-serif)";
 const DM   = "var(--font-dm-sans,'DM Sans',sans-serif)";
 
 const navLinks = [
-  { label: "Services",     href: "/#offer" },
-  { label: "Process",      href: "/#process" },
+  { label: "Home",         href: "/" },
+  { label: "Approach",     href: "/creative-approach" },
   { label: "Case Studies", href: "/case-studies" },
+  { label: "Blog",         href: "/blog" },
   { label: "FAQ",          href: "/#faq" },
 ];
 
@@ -241,6 +242,17 @@ export function Navbar() {
               <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none"
                 style={{ background: "linear-gradient(to bottom, rgba(168,230,61,0.04), transparent)" }}
               />
+
+              {/* Close Button UI */}
+              <div className="absolute top-6 right-6 z-50">
+                <button
+                  onClick={() => setMobileOpen(false)}
+                  className="p-3 bg-white/5 border border-white/10 rounded-full text-white/70 hover:text-white transition-colors"
+                  aria-label="Close menu"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
 
               <div className="flex flex-col min-h-screen px-8 pt-28 pb-10">
                 {/* Nav links — staggered */}

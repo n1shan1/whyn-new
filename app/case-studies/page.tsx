@@ -11,8 +11,10 @@ const CALCOM_URL = process.env.NEXT_PUBLIC_CALCOM_URL || "https://cal.com/your-u
 
 const stories = [
   {
+    id: "coaching-system",
     tag: "Coaching",
     client: "Online Business Coach",
+    title: "15 Hours Saved. Zero Manual DMs.",
     pullQuote: "I was spending 15 hours a week just replying to DMs and chasing people down. Now I just wake up and check my calendar.",
     narrative: {
       origin: "She had successfully built an audience, pulling in consistent attention through Instagram Reels and Stories. But attention doesn't pay the bills. Every lead had to be manually qualified via DMs. Hours were spent going back and forth trying to find a time to meet. The result? Leads went cold, she was burning out, and revenue was stuck at a ceiling because she physically couldn't handle more manual volume.",
@@ -27,8 +29,10 @@ const stories = [
     }
   },
   {
+    id: "course-creator-machine",
     tag: "Creator",
     client: "Course Creator",
+    title: "From Void to Value: The Sales Machine",
     pullQuote: "I had 40,000 subscribers and felt like I was screaming into a void. Now I have a predictable machine that prints sales.",
     narrative: {
       origin: "With over 40k subscribers on YouTube, the top of the funnel was massive. But conversions were abysmal—less than 0.1% of viewers were buying the $497 course. They were entirely dependent on the algorithm; if a video flopped, revenue plummeted. They had no email list, no follow-up mechanism, and no way to capture the traffic they were generating.",
@@ -43,8 +47,10 @@ const stories = [
     }
   },
   {
+    id: "agency-friction-filter",
     tag: "Agency",
     client: "Marketing Agency",
+    title: "The Friction Filter",
     pullQuote: "We were taking calls with people who had ₹10k budgets for a ₹1.5L service. The new system filters them out instantly.",
     narrative: {
       origin: "Their calendar was full, but their bank account wasn't. The agency had no lead qualification process, meaning their senior team was wasting up to 10 hours a week on discovery calls with 'tire-kickers' who could never afford their services. It was demoralizing and expensive.",
@@ -92,11 +98,12 @@ export default function CaseStudiesPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#A8E63D] mb-4" style={{ fontFamily: SORA }}>
               The Wall of Proof
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.05] mb-6 max-w-4xl" style={{ fontFamily: SORA, letterSpacing: "-0.03em" }}>
-              Stories of transformation.
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white leading-[0.9] mb-8 max-w-4xl" style={{ fontFamily: SORA, letterSpacing: "-0.05em" }}>
+              Systems we<br />
+              <span className="text-[#A8E63D]">built.</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed font-light" style={{ fontFamily: DM }}>
-              We don't just build websites; we architect systems that change how businesses operate. Read the narratives behind the numbers.
+            <p className="text-xl md:text-2xl text-muted-foreground/80 max-w-2xl leading-relaxed font-light" style={{ fontFamily: DM }}>
+              We don't just build websites; we architect systems that change how businesses operate. Real numbers, real transformation.
             </p>
           </motion.div>
         </div>
@@ -115,76 +122,102 @@ export default function CaseStudiesPage() {
               <motion.div
                 key={i}
                 variants={fadeUp}
-                className="grid lg:grid-cols-[1fr_380px] gap-12 lg:gap-20 items-start relative"
+                className="grid lg:grid-cols-[1fr_400px] gap-12 lg:gap-24 items-start relative group"
               >
                 {/* Left Column: The Narrative */}
                 <div className="flex flex-col">
-                  <div className="flex items-center gap-3 mb-8">
-                    <span className="text-[11px] font-bold uppercase tracking-widest text-[#0F0F12] bg-[#A8E63D] px-3 py-1 rounded-sm" style={{ fontFamily: SORA }}>
+                  <div className="flex items-center gap-3 mb-6">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0F0F12] bg-[#A8E63D] px-2.5 py-1 rounded-sm" style={{ fontFamily: SORA }}>
                       {story.tag}
                     </span>
-                    <span className="text-sm font-semibold text-white/80" style={{ fontFamily: SORA }}>{story.client}</span>
+                    <div className="h-px w-8 bg-white/10" />
+                    <span className="text-xs font-semibold text-white/40 tracking-wider" style={{ fontFamily: SORA }}>{story.client}</span>
                   </div>
 
+                  <h2 className="text-3xl md:text-5xl font-bold text-white mb-10 leading-[1.1] tracking-tight" style={{ fontFamily: SORA, letterSpacing: "-0.04em" }}>
+                    {story.title}
+                  </h2>
+
+                  {/* Visual Element Placeholder */}
+                  <Link href={`/case-studies/${story.id || 'coaching-system'}`}>
+                    <div className="mb-12 aspect-[16/9] rounded-2xl bg-white/[0.03] border border-white/[0.08] overflow-hidden relative group/image cursor-pointer">
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#A8E63D]/5 to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-700" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="text-white/5 font-bold text-6xl select-none" style={{ fontFamily: SORA }}>{story.tag} SYSTEM</div>
+                      </div>
+                      {/* Animated Glow */}
+                      <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#A8E63D]/10 blur-[100px] rounded-full pointer-events-none" />
+                      <div className="absolute top-6 right-6 opacity-0 group-hover/image:opacity-100 transition-all duration-300 translate-x-4 group-hover/image:translate-x-0">
+                        <div className="bg-[#A8E63D] text-[#0F0F12] p-3 rounded-full">
+                          <ArrowUpRight className="h-6 w-6" />
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+
                   {/* Pull Quote */}
-                  <div className="relative mb-12 pl-6 md:pl-8 border-l-2 border-[#A8E63D]/30 py-2">
-                    <Quote className="absolute top-0 left-[-15px] h-8 w-8 text-[#A8E63D]/20 -translate-y-4 bg-background" />
-                    <p className="text-2xl md:text-3xl text-white font-medium leading-snug tracking-tight" style={{ fontFamily: SORA }}>
+                  <div className="relative mb-16 pl-8 md:pl-10 border-l border-[#A8E63D] py-2">
+                    <Quote className="absolute top-0 left-[-12px] h-6 w-6 text-[#A8E63D] bg-background" />
+                    <p className="text-xl md:text-2xl text-white/90 font-medium italic leading-relaxed" style={{ fontFamily: DM }}>
                       "{story.pullQuote}"
                     </p>
                   </div>
 
                   {/* The Story */}
-                  <div className="space-y-10 text-muted-foreground leading-relaxed text-base md:text-lg font-light" style={{ fontFamily: DM }}>
-                    <div>
-                      <h3 className="text-sm font-bold uppercase tracking-widest text-white/60 mb-4" style={{ fontFamily: SORA }}>1. The Origin</h3>
-                      <p>{story.narrative.origin}</p>
+                  <div className="grid md:grid-cols-2 gap-x-12 gap-y-16 text-muted-foreground leading-relaxed text-base font-light" style={{ fontFamily: DM }}>
+                    <div className="col-span-2">
+                      <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#A8E63D] mb-4" style={{ fontFamily: SORA }}>1. The Origin</h3>
+                      <p className="text-lg text-white/70">{story.narrative.origin}</p>
                     </div>
                     <div>
-                      <h3 className="text-sm font-bold uppercase tracking-widest text-white/60 mb-4" style={{ fontFamily: SORA }}>2. The Shift</h3>
+                      <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#A8E63D] mb-4" style={{ fontFamily: SORA }}>2. The Shift</h3>
                       <p>{story.narrative.shift}</p>
                     </div>
                     <div>
-                      <h3 className="text-sm font-bold uppercase tracking-widest text-white/60 mb-4" style={{ fontFamily: SORA }}>3. The Aftermath</h3>
+                      <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#A8E63D] mb-4" style={{ fontFamily: SORA }}>3. The Aftermath</h3>
                       <p className="text-white/90 font-normal">{story.narrative.aftermath}</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Column: Sticky Metrics Card */}
-                <div className="lg:sticky lg:top-32 rounded-3xl border border-white/[0.05] bg-[rgba(255,255,255,0.015)] p-8 shadow-2xl backdrop-blur-md">
-                  <p className="text-xs font-bold uppercase tracking-widest text-white/40 mb-8 border-b border-white/5 pb-4" style={{ fontFamily: SORA }}>
-                    At a glance
-                  </p>
+                <div className="lg:sticky lg:top-32 rounded-[2rem] border border-white/[0.08] bg-white/[0.02] p-10 shadow-3xl backdrop-blur-xl group-hover:border-[#A8E63D]/20 transition-colors duration-500">
+                  <div className="flex items-center justify-between mb-10 border-b border-white/5 pb-6">
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40" style={{ fontFamily: SORA }}>
+                      The Proof
+                    </p>
+                    <div className="h-2 w-2 rounded-full bg-[#A8E63D] animate-pulse" />
+                  </div>
                   
-                  <div className="space-y-8">
+                  <div className="space-y-10">
                     {/* Before */}
                     <div>
-                      <p className="text-[10px] uppercase tracking-widest text-red-400/60 mb-2 font-bold" style={{ fontFamily: SORA }}>The Before</p>
-                      <p className="text-xl font-bold text-red-400/90 mb-1" style={{ fontFamily: SORA, letterSpacing: "-0.02em" }}>{story.metrics.before.value}</p>
-                      <p className="text-xs text-muted-foreground" style={{ fontFamily: DM }}>{story.metrics.before.label}</p>
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-red-400/50 mb-3 font-bold" style={{ fontFamily: SORA }}>The Friction</p>
+                      <p className="text-2xl font-bold text-red-400/90 mb-1" style={{ fontFamily: SORA, letterSpacing: "-0.02em" }}>{story.metrics.before.value}</p>
+                      <p className="text-sm text-muted-foreground/60" style={{ fontFamily: DM }}>{story.metrics.before.label}</p>
                     </div>
 
-                    <ArrowRight className="h-5 w-5 text-white/20" />
+                    <div className="flex justify-center py-2">
+                      <div className="w-px h-12 bg-gradient-to-b from-red-400/20 via-[#A8E63D]/20 to-[#A8E63D]" />
+                    </div>
 
                     {/* After */}
                     <div>
-                      <p className="text-[10px] uppercase tracking-widest text-[#A8E63D]/60 mb-2 font-bold" style={{ fontFamily: SORA }}>The After</p>
-                      <p className="text-2xl font-bold text-[#A8E63D] mb-1" style={{ fontFamily: SORA, letterSpacing: "-0.02em" }}>{story.metrics.after.value}</p>
-                      <p className="text-xs text-muted-foreground" style={{ fontFamily: DM }}>{story.metrics.after.label}</p>
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-[#A8E63D]/50 mb-3 font-bold" style={{ fontFamily: SORA }}>The Freedom</p>
+                      <p className="text-4xl font-extrabold text-[#A8E63D] mb-1" style={{ fontFamily: SORA, letterSpacing: "-0.04em" }}>{story.metrics.after.value}</p>
+                      <p className="text-sm text-muted-foreground/80 font-medium" style={{ fontFamily: DM }}>{story.metrics.after.label}</p>
                     </div>
 
-                    <hr className="border-white/5" />
-
-                    {/* Bottom Line */}
-                    <div>
-                      <p className="text-[10px] uppercase tracking-widest text-white/40 mb-2 font-bold" style={{ fontFamily: SORA }}>Bottom Line</p>
-                      <p className="text-sm font-semibold text-white leading-relaxed" style={{ fontFamily: DM }}>{story.metrics.bottomLine}</p>
-                    </div>
-                    
-                    <div className="pt-4 mt-4 border-t border-white/5 flex items-center justify-between text-xs text-muted-foreground/60" style={{ fontFamily: DM }}>
-                      <span>Timeline:</span>
-                      <span className="text-white/80">{story.metrics.timeline}</span>
+                    <div className="pt-8 border-t border-white/5 space-y-6">
+                      <div>
+                        <p className="text-[10px] uppercase tracking-[0.2em] text-white/30 mb-2 font-bold" style={{ fontFamily: SORA }}>Performance</p>
+                        <p className="text-base font-semibold text-white/90 leading-relaxed" style={{ fontFamily: DM }}>{story.metrics.bottomLine}</p>
+                      </div>
+                      
+                      <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-white/20" style={{ fontFamily: SORA }}>
+                        <span>Build Time</span>
+                        <span className="text-[#A8E63D]/60 font-bold">{story.metrics.timeline}</span>
+                      </div>
                     </div>
                   </div>
                 </div>

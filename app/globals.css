@@ -93,6 +93,13 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sora, 'Sora', sans-serif);
   }
+  
+  .bg-grid {
+    background-size: 50px 50px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  }
 }
 
 /* ─── MARQUEE ANIMATION ─── */
